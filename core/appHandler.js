@@ -194,7 +194,7 @@ module.exports.redirect = function (req, res) {
 module.exports.calc = function (req, res) {
 	if (req.body.eqn) {
 		res.render('app/calc', {
-			output: mathjs.eval(req.body.eqn)
+			output: mathjs.eval(req.body)
 		})
 	} else {
 		res.render('app/calc', {
